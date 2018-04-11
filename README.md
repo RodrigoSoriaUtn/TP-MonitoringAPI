@@ -4,9 +4,10 @@ Detects, inform, and store information about the browser and the OS of who enter
 ## Teory:
 
 ## Maven
-  * ### Goals: 
-
 ```
+ * ### Goals: 
+
+
     * mvn clean:
     
     * mvn compile:
@@ -17,9 +18,10 @@ Detects, inform, and store information about the browser and the OS of who enter
 
 ```
     
-  * ### Scopes: 
-  
 ```
+ * ### Scopes: 
+  
+
   
     * compile:
      
@@ -35,21 +37,23 @@ Detects, inform, and store information about the browser and the OS of who enter
     
 ```
     
-  * ### Archetype
+```
+ * ### Archetype
+
 
 ```
 
 ```
+ * ### Basic structure of a maven project
 
-  * ### Basic structure of a maven project
 
-```
-
-```
-
-  * ### Differences between *Archetype* and *Artifact*
 
 ```
+
+```
+ * ### Differences between *Archetype* and *Artifact*
+
+
 
 ```
   
