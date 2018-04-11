@@ -8,13 +8,13 @@ Detects, inform, and store information about the browser and the OS of who enter
  * ### <br>Goals: <br>
 
 
-    * mvn clean:
+    * mvn clean: Validates that the project is correct and all the necessary information is available.
     
-    * mvn compile:
+    * mvn compile: Compiles the source code of the project. Also doing a *mvn clean*.
     
-    * mvn package:
+    * mvn package: Takes the compiled code and package it in its *distributable format*, for example, a .jar. After doing a mvn test.
     
-    * mvn install:
+    * mvn install: Install the package in to the local repository, making it ready for use in other projects locally.
 
 
     
