@@ -5,13 +5,15 @@ Detects, inform, and store information about the browser and the OS of who enter
 
 ## Maven
   * ### Goals:
-    * mvn clean:
+--  * mvn clean:
     
     * mvn compile:
     
     * mvn package:
     
     * mvn install:
+
+--
     
   * ### Scopes:
   
