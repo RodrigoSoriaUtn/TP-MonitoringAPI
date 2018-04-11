@@ -3,7 +3,7 @@ Detects, inform, and store information about the browser and the OS of who enter
 
 ## Teory:
 
-## Maven
+## [Maven](https://maven.apache.org/what-is-maven.html)
 
  * ### <br>Goals: <br>
 
@@ -56,7 +56,7 @@ Detects, inform, and store information about the browser and the OS of who enter
 
 
   
-## Spring
+## [Spring](https://spring.io/)
 
   * **@Component**
   ```
@@ -71,5 +71,5 @@ Detects, inform, and store information about the browser and the OS of who enter
   ```
   ```
   
-## Rest
+## [Rest](https://en.wikipedia.org/wiki/Representational_state_transfer)
 
