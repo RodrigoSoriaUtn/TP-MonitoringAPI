@@ -6,7 +6,7 @@ Detects, inform, and store information about the browser and the OS of who enter
 ## Maven
 
  * ### <br>Goals: <br>
-```
+
 
     * mvn clean:
     
@@ -16,11 +16,11 @@ Detects, inform, and store information about the browser and the OS of who enter
     
     * mvn install:
 
-```
+
     
 
  * ### Scopes: 
-```  
+ 
   
     * compile:
      
@@ -34,27 +34,27 @@ Detects, inform, and store information about the browser and the OS of who enter
     
     * import:
     
-```
+
     
 
  * ### Archetype
-```
 
-```
+
+
 
 
  * ### Basic structure of a maven project
-```
 
 
-```
+
+
 
 
  * ### Differences between *Archetype* and *Artifact*
-```
 
 
-```
+
+
   
 ## Spring
 
