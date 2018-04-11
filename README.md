@@ -4,7 +4,9 @@ Detects, inform, and store information about the browser and the OS of who enter
 ## Teory:
 
 ## Maven
-  * ### Goals: ```
+  * ### Goals: 
+
+```
     * mvn clean:
     
     * mvn compile:
@@ -15,7 +17,9 @@ Detects, inform, and store information about the browser and the OS of who enter
 
 ```
     
-  * ### Scopes: ```
+  * ### Scopes: 
+  
+```
   
     * compile:
      
