@@ -5,7 +5,7 @@ Detects, inform, and store information about the browser and the OS of who enter
 
 ## [Maven](https://maven.apache.org/what-is-maven.html)
 
- * ### <br>Goals: <br>
+  * ### Goals: 
 
 
     * mvn clean: Validates that the project is correct and all the necessary information is available.
@@ -17,22 +17,19 @@ Detects, inform, and store information about the browser and the OS of who enter
     * mvn install: Install the package in to the local repository, making it ready for use in other projects locally.
 
 
-    
-
  * ### Scopes: 
  
-  
-    * compile:
+    * compile: Default scope. It determines that the *compile dependencies* are available in all classpaths of a project. Is fully transitive, so those dependencies are propagated to dependent projects.
      
-    * provided:
+    * provided: Is like the compile scope, but needs to be specified into the JDK or a container to provide the dependencies at *runtime*. Is only available on the compilation and test classpaths and is not transitive.
     
-    * runtime:
+    * runtime: This scope indicates that the dependency is not required for compilation, but is required for the execution. It is on the runtime and test classpaths.
     
-    * test:
+    * test: This scope indicates that the dependency is only available for the test compilation and execution phases. Is not transitive.
     
-    * system:
+    * system: This scope is like the provided scope but it requires the JAR wich contains it explicity, is always available and is not looked up in a repository.
     
-    * import:
+    * import: (only in maven 2.0) is only supported on a dependency of type pom in the <dependencyManagement> section. The dependencies in this scope doesn't participate in limiting the transitivity of a dependency.
     
 
     
