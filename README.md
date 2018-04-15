@@ -58,15 +58,20 @@ Detects, inform, and store information about the browser and the OS of who enter
 
   * **@Component**
   ```
+    * Indicates that the class with this annotation is a component (a Spring bean).
+      Is a generic stereotype for any Spring-managed component
   ```
   * **@Repository**
   ```
+    * Specific stereotype for the persistence layer.
   ```
   * **@Service**
   ```
+    * Specific stereotype for the service layer.
   ```
   * **@Controller**
   ```
+    * Specific stereotype for the presentation layer. (for Spring MVC).
   ```
   
 ## [Rest](https://en.wikipedia.org/wiki/Representational_state_transfer)
