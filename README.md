@@ -35,20 +35,21 @@ Detects, inform, and store information about the browser and the OS of who enter
     
 
  * ### Archetype
-
+   * is a Maven project templating toolkit. "An archetype is defined as an original pattern or model from which all other things of the same kind are made".
 
 
 
 
  * ### Basic structure of a maven project
-
+    ![alt tag](https://kentorjava.files.wordpress.com/2012/08/maven-structure.jpg "Basic structure of a Maven project.")
 
 
 
 
 
  * ### Differences between *Archetype* and *Artifact*
-
+  *  The artifacts are the output of a maven build proccess. It's a file, usually a JAR, produced (one or more) by the Maven build.
+  *  While the archetypes are patterns or models for the creation/use of project templates.
 
 
 
