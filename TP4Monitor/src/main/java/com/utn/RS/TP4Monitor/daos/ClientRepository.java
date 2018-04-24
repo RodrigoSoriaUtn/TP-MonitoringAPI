@@ -5,12 +5,14 @@
  */
 package com.utn.RS.TP4Monitor.daos;
 
-import com.utn.RS.TP4Monitor.models.Information;
+import com.utn.RS.TP4Monitor.models.Client;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
  *
- * @author alumno
+ * @author rodrigo
  */
-public class InformationDao extends GenericDao <Information, Integer>{
+
+public interface ClientRepository extends JpaRepository<Client, Long>{
     
 }
