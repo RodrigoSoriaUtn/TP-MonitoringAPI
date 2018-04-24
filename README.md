@@ -76,3 +76,12 @@ Detects, inform, and store information about the browser and the OS of who enter
   
 ## [Rest](https://en.wikipedia.org/wiki/Representational_state_transfer)
 
+ * **GET** - Retrieve information from a specific resource.
+ * **POST** - Indicates that the resource will do something with the provided data (entity).
+ * **PUT** - Updates or create entities based on the data transferred.
+ * **PATCH** - Applies partial modifications on the resource.
+ * **DELETE** - Request that a result will be removed.
+ * **HEAD** - Is like the get but without the body of the response.
+ * **CONNECT** - Establish a tunnel with the specified resource.
+ * **OPTIONS** - used to describe the communication controls for the resource.
+ * **TRACE** - Allows the client to see what is being received at the other end of the request chain. Is used to invoke a remote application-layer loop-back of the request message.
