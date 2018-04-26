@@ -32,8 +32,7 @@ public class Client implements Serializable {
     
     public Client(){}
     
-    public Client(Long id, String browserName, String operativeSystemName) {
-        this.id = id;
+    public Client(String browserName, String operativeSystemName) {
         this.browserName = browserName;
         this.operativeSystemName = operativeSystemName;
     }

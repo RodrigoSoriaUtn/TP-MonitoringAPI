@@ -9,7 +9,6 @@
 	<packaging>jar</packaging>
 
 	<name>TP4Monitor</name>
-	<description>Demo project for Spring Boot</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -33,7 +32,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
+                <dependency>
+                    <groupId>net.sf.uadetector</groupId>
+                    <artifactId>uadetector-resources</artifactId>
+                    <version>2014.10</version>
+                </dependency>
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
