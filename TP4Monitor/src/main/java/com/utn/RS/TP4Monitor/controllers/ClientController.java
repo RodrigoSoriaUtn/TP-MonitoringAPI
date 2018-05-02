@@ -5,6 +5,7 @@
  */
 package com.utn.RS.TP4Monitor.controllers;
 
+import com.utn.RS.TP4Monitor.DTO.SimpleCountableValue;
 import com.utn.RS.TP4Monitor.daos.ClientRepository;
 import com.utn.RS.TP4Monitor.models.Client;
 import java.util.List;
@@ -53,4 +54,13 @@ public class ClientController {
         return clientService.findAll();
     }
     
+    @RequestMapping("/popularBrowser")
+    public @ResponseBody SimpleCountableValue getMostUsedBrowser(){
+        return clientService.usedBrowsers().get(0);
+    }
+    
+    @RequestMapping("/popularOPSystem")
+    public @ResponseBody SimpleCountableValue getMostUsedOPSystem(){
+        return clientService.usedOPSystems().get(0);
+    }
 }
