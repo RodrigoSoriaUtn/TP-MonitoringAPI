@@ -5,6 +5,7 @@
  */
 package com.utn.RS.TP4Monitor.controllers;
 
+import com.utn.RS.TP4Monitor.DTO.CountableClient;
 import com.utn.RS.TP4Monitor.DTO.SimpleCountableValue;
 import com.utn.RS.TP4Monitor.daos.ClientRepository;
 import com.utn.RS.TP4Monitor.models.Client;
@@ -45,7 +46,7 @@ public class ClientController {
         String operativeSystem = clientData.getOperatingSystem().getName();
         
         clientService.save(new Client(browser,operativeSystem));
-        //Returns an CREATED http status because this methods uploads something to the database :O
+        //Returns a CREATED http status because this methods uploads something to the database :O
         return new ResponseEntity(HttpStatus.CREATED).getStatusCode();
     }
     
@@ -56,11 +57,31 @@ public class ClientController {
     
     @RequestMapping("/popularBrowser")
     public @ResponseBody SimpleCountableValue getMostUsedBrowser(){
-        return clientService.usedBrowsers().get(0);
+        SimpleCountableValue OS;
+        if(!clientService.usedBrowsers().isEmpty())
+            OS = clientService.usedBrowsers().get(0);
+        else
+            OS = new SimpleCountableValue(0L,"none");
+        return OS;
     }
     
     @RequestMapping("/popularOPSystem")
     public @ResponseBody SimpleCountableValue getMostUsedOPSystem(){
-        return clientService.usedOPSystems().get(0);
+        SimpleCountableValue OS;
+        if(!clientService.usedOPSystems().isEmpty())
+            OS = clientService.usedOPSystems().get(0);
+        else
+            OS = new SimpleCountableValue(0L,"none");
+        return OS;
+    }
+    
+    @RequestMapping("/popularClient")
+    public @ResponseBody CountableClient getMostPopularClient(){
+        CountableClient client;
+        if(!clientService.getMostPopularClient().isEmpty())
+            client = clientService.getMostPopularClient().get(0);
+        else
+            client = new CountableClient(0L,"none","none");
+        return client;
     }
 }

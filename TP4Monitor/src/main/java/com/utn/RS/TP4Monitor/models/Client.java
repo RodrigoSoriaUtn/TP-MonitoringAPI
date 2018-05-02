@@ -28,13 +28,13 @@ public class Client implements Serializable {
     private String browserName;
     
     @Column(name = "opSystemName")
-    private String operativeSystemName;
+    private String opSystemName;
     
     public Client(){}
     
     public Client(String browserName, String operativeSystemName) {
         this.browserName = browserName;
-        this.operativeSystemName = operativeSystemName;
+        this.opSystemName = operativeSystemName;
     }
     
     public Long getId() {
@@ -53,11 +53,11 @@ public class Client implements Serializable {
         this.browserName = browserName;
     }
 
-    public String getOperativeSystemName() {
-        return operativeSystemName;
+    public String getOpSystemName() {
+        return opSystemName;
     }
 
-    public void setOperativeSystemName(String operativeSystemName) {
-        this.operativeSystemName = operativeSystemName;
+    public void setOpSystemName(String opSystemName) {
+        this.opSystemName = opSystemName;
     }
 }

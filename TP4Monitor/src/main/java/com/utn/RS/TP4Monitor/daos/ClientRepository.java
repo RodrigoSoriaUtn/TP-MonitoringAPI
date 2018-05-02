@@ -5,6 +5,7 @@
  */
 package com.utn.RS.TP4Monitor.daos;
 
+import com.utn.RS.TP4Monitor.DTO.CountableClient;
 import com.utn.RS.TP4Monitor.DTO.SimpleCountableValue;
 import com.utn.RS.TP4Monitor.models.Client;
 import java.util.List;
@@ -18,17 +19,25 @@ import org.springframework.data.jpa.repository.Query;
 
 public interface ClientRepository extends JpaRepository<Client, Long>{
     
-    @Query(" SELECT new com.utn.RS.TP4Monitor.DTO.SimpleCountableValue(count(c.browserName), c.browserName)"
+    @Query(" SELECT new com.utn.RS.TP4Monitor.DTO.SimpleCountableValue"
+            + "     (count(c.browserName), c.browserName)"
             + " FROM clients c"
             + " GROUP BY c.browserName"
             + " ORDER BY count(c.browserName) DESC")
     public List<SimpleCountableValue> usedBrowsers();
     
-    @Query(" SELECT new com.utn.RS.TP4Monitor.DTO.SimpleCountableValue(count(c.opSystemName), c.opSystemName)"
+    @Query(" SELECT new com.utn.RS.TP4Monitor.DTO.SimpleCountableValue"
+            + "     (count(c.opSystemName), c.opSystemName)"
             + " FROM clients c"
             + " GROUP BY c.opSystemName"
             + " ORDER BY count(c.opSystemName) DESC")
     public List<SimpleCountableValue> usedOPSystems();
- 
+    
+    @Query("SELECT new com.utn.RS.TP4Monitor.DTO.CountableClient"
+            + "     (COUNT(*), c.browserName, c.opSystemName)"
+            + " FROM clients c"
+            + " GROUP BY c.browserName, c.opSystemName"
+            + " ORDER BY COUNT(*) DESC")
+    public List<CountableClient> getMostPopularClient();
     
 }
