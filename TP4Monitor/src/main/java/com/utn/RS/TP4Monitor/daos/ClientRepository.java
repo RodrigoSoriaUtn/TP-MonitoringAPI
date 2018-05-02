@@ -18,13 +18,13 @@ import org.springframework.data.jpa.repository.Query;
 
 public interface ClientRepository extends JpaRepository<Client, Long>{
     
-    @Query(" SELECT count(c.browserName) as cant, c.browserName as browser"
+    @Query(" SELECT new com.utn.RS.TP4Monitor.DTO.SimpleCountableValue(count(c.browserName), c.browserName)"
             + " FROM clients c"
             + " GROUP BY c.browserName"
             + " ORDER BY count(c.browserName) DESC")
     public List<SimpleCountableValue> usedBrowsers();
     
-    @Query(" SELECT count(c.opSystemName) as cant, c.opSystemName as opSystem"
+    @Query(" SELECT new com.utn.RS.TP4Monitor.DTO.SimpleCountableValue(count(c.opSystemName), c.opSystemName)"
             + " FROM clients c"
             + " GROUP BY c.opSystemName"
             + " ORDER BY count(c.opSystemName) DESC")

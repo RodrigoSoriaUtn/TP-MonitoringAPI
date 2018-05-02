@@ -10,20 +10,22 @@ package com.utn.RS.TP4Monitor.DTO;
  * @author rodrigo
  */
 public class SimpleCountableValue {
-    private int quantity;
+    
+    private Long quantity;
     private String value;
-
+    
     public SimpleCountableValue() {}
-    public SimpleCountableValue(int quantity, String value) {
+    
+    public SimpleCountableValue(Long quantity, String value) {
         this.quantity = quantity;
         this.value = value;
     }
 
-    public int getQuantity() {
+    public Long getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(int quantity) {
+    public void setQuantity(Long quantity) {
         this.quantity = quantity;
     }
 
